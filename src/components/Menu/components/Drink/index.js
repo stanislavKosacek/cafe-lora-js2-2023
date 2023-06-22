@@ -1,3 +1,6 @@
+import { Layer } from '../Layer';
+import './style.css';
+
 export const Drink = ({ id, name, ordered, image, layers }) => {
   const element = document.createElement('div');
   element.classList.add('drink');
@@ -10,13 +13,6 @@ export const Drink = ({ id, name, ordered, image, layers }) => {
     </div>
     <div class="drink__info">
       <h3>${name}</h3>
-      <div class="layer">
-        <div
-          class="layer__color"
-          style="background-color: #613916"
-        ></div>
-        <div class="layer__label">espresso</div>
-      </div>
     </div>
   </div>
   <div class="drink__controls">
@@ -24,12 +20,8 @@ export const Drink = ({ id, name, ordered, image, layers }) => {
   </div>
   `;
 
+  const drinkInfoElm = element.querySelector('.drink__info');
+  drinkInfoElm.append(...layers.map((layer) => Layer(layer)));
+
   return element;
 };
-
-`
-
-<div class="drink">
-        
-      </div>
-`;
