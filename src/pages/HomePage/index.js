@@ -12,7 +12,7 @@ export const HomePage = () => {
   const main = document.createElement('main');
   main.append(Banner(), Menu({ drinks: 'loading' }), Gallery(), Contact());
 
-  pageElement.append(Header(), main, Footer());
+  pageElement.append(Header({}), main, Footer());
 
   return pageElement;
 };
