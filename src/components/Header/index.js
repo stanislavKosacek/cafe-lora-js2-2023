@@ -16,6 +16,14 @@ export const Header = () => {
     </div>
   </div>
   `;
+  const navBtn = element.querySelector('.nav-btn');
+  const navElm = element.querySelector('.rollout-nav');
+  navBtn.addEventListener('click', () => {
+    navElm.classList.toggle('nav-closed');
+  });
+  navElm.addEventListener('click', () => {
+    navElm.classList.add('nav-closed');
+  });
 
   return element;
 };

@@ -2,6 +2,7 @@ import './style.css';
 
 export const Banner = () => {
   const element = document.createElement('section');
+  element.id = 'home';
   element.classList.add('banner');
   element.innerHTML = `
   <div class="container">

@@ -2,6 +2,7 @@ import './style.css';
 
 export const Menu = () => {
   const element = document.createElement('section');
+  element.id = 'menu';
   element.classList.add('menu');
   element.innerHTML = `
   <div class="container">

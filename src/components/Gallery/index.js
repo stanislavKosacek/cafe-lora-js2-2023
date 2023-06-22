@@ -2,6 +2,7 @@ import './style.css';
 
 export const Gallery = () => {
   const element = document.createElement('section');
+  element.id = 'gallery';
   element.classList.add('gallery');
   element.innerHTML = `
   <div class="container">
